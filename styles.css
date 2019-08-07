@@ -1,0 +1,541 @@
+ /* load normalize.css */
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css';
+/* load fonts */
+@import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans:300');
+
+ /*------------------------------------------------------------------
+[Table of contents]
+1.  body
+		p
+ 		.page-wrapper
+		.intro
+			header h1
+			header h2
+		2 .summary
+	    	.summary a:link,
+			.summary a:visited
+			.summary a:hover,
+    		.summary a:active
+		3 .preamble
+			.preamble h3
+			.preamble p
+		4 .explanation
+			.explanation p:last-child:after
+			.explanation h3,
+		5 .participation h3,
+		6 .benefits h3,
+		7 .requirements h3,
+	 	8 aside h3
+		9 .explanation p,
+    	  .participation p,
+    	  .benefits p
+       10 .participation a:link,
+		  .participation a:visited
+	   11 .participation a:hover,
+	      .participation a:active
+	      .participation:after
+	   12 .benefits:before
+		  .benefits
+		  .benefits:after
+       13 @-webkit-keyframes mymove
+	      @keyframes mymove
+	   14 .requirements
+          .requirements p
+          .requirements p:last-child
+          .requirements a:link,
+	      .requirements a:visited
+          .requirements a:hover,
+          .requirements a:active
+       15 footer
+		  footer a
+          footer:after
+	   16 @-webkit-keyframes movespaceship
+       17 @keyframes movespaceship
+       18 aside a
+       19 .design-selection
+          .design-archives,
+	      .zen-resources
+       20 .design-selection nav ul,
+	      .design-archives nav ul,
+	      .zen-resources ul
+       21 .design-selection nav ul li a:link,
+	      .design-archives nav ul li a:link,
+	      .zen-resources ul li a:link,
+	      .design-selection nav ul li a:visited,
+	      .design-archives nav ul li a:visited,
+	      .zen-resources ul li a:visited
+       22 .design-selection nav ul li a:hover,
+	      .design-archives nav ul li a:hover,
+	      .zen-resources ul li a:hover,
+	      .design-selection nav ul li a:active,
+	      .design-archives nav ul li a:active,
+	      .zen-resources ul li a:active
+       23 .design-selection nav ul li:first-child:before,
+	      .design-selection nav ul li:nth-child(2):before,
+	      .design-selection nav ul li:nth-child(3):before,
+	      .design-selection nav ul li:nth-child(4):before,
+	      .design-selection nav ul li:nth-child(5):before,
+	      .design-selection nav ul li:nth-child(6):before,
+	      .design-selection nav ul li:nth-child(7):before,
+	      .design-selection nav ul li:last-child:before,
+	      .design-archives nav ul li:first-child:before,
+	      .design-archives nav ul li:last-child:before,
+	      .zen-resources ul li:first-child:before,
+	      .zen-resources ul li:nth-child(2):before,
+	      .zen-resources ul li:nth-child(3):before,
+	      .zen-resources ul li:nth-child(4):before,
+	      .zen-resources ul li:last-child:before
+       24 .design-selection nav ul li:first-child:before,
+	      .design-archives nav ul li:first-child:before,
+	      .zen-resources ul li:first-child:before
+       25 .design-selection nav ul li:nth-child(2):before,
+	      .design-archives nav ul li:last-child:before,
+	      .zen-resources ul li:nth-child(2):before
+       26 .design-selection nav ul li:nth-child(3):before,
+	      .zen-resources ul li:nth-child(3):before
+       27 .design-selection nav ul li:nth-child(4):before,
+	      .zen-resources ul li:nth-child(4):before
+       28 .design-selection nav ul li:nth-child(5):before,
+	      .zen-resources ul li:last-child:before
+       29 .design-selection nav ul li:nth-child(6):before
+          .design-selection nav ul li:nth-child(7):before
+          .design-selection nav ul li:last-child:before
+       30 .design-selection nav ul li,
+	      .design-archives nav ul li,
+	      .zen-resources ul li
+-------------------------------------------------------------------*/
+/* body background styling */
+body {
+	font-family: 'Open Sans', arial, sans-serif;
+	color: tomato;
+	/* add parallax effect */
+    background-attachment: fixed;
+    background-image: url(img/space.png);
+	background-color: #453c3c;
+    background-blend-mode: multiply;
+}
+/* set font-weight for all paragraph tags in body*/
+p {
+	font-weight: 800;
+}
+
+/* set page-wrapper width and css */
+.page-wrapper {
+	width:1200px;
+	margin:5% auto;
+	position: relative;
+}
+
+/* background styling */
+.intro {
+	background-image: url(img/science-fiction-asimov-warrior.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+/* fix header h1 on top left (CSS zen Garden) */
+header h1{
+	position:fixed;
+	top:0;
+	right:0;
+	width:100%;
+	box-sizing: inherit;
+	writing-mode: vertical-lr;
+	z-index: 9;
+}
+
+/* header h2 styling ( the beauty of CSS design....) */
+header h2{
+	font-size:6em;
+	font-family: Anton, arial, sans-serif;
+	padding: 3em auto;
+	text-align: left;	
+	width: 5%;
+	text-shadow: 2px 2px black;
+}
+
+/* align summary class on the top right of the header (a demonstration of what can.....) */
+.summary {
+	position: absolute;
+	top:0;
+	right:-10%;
+	width:50%;
+	font-size: 1.5em;
+	text-align: left;
+	padding: 1em 1em;
+	color: #fff;
+}
+/* give summary a tag text color and text decoration */
+.summary a:link,
+.summary a:visited {
+	color: tomato;
+	text-decoration: none;
+}
+
+.summary a:hover,
+.summary a:active {
+	text-decoration: underline;
+}
+
+/* preamble div styling starts here (the road to enlightment) */
+.preamble {
+	position: absolute;/*set position */
+	top:300px;
+	right:-2%;
+	width:400px;
+	font-size: 1em;
+	padding: 1em 1em;
+	color: black;
+	background-color: tomato; /* give background color */
+}
+
+/* preamble h3 tag font family and font size */
+.preamble h3 {
+	font-family: Anton, arial, sans-serif;
+	font-size: 2em;	
+}
+
+/* preamble paragraph tags font-weight */
+.preamble p {
+	font-weight: 800;
+}
+#zen-supporting{
+	width:100%;
+}
+/* zen-explanation elements styling (So what is this about.......) */
+.explanation  {
+	width:100%;
+	text-align: center; /* align text in center */
+    padding: 2em; /* give bottom padding */
+}
+
+/* add image after explanation paragraph to improve design */
+.explanation:after {
+	content:url(img/star-wars-lightsaber-laser-sword.png);
+	margin-left:-2%;
+}
+
+/* set h3 tag fomt-family, font-size and top botttom padding  */
+.explanation h3,
+.participation h3,
+.benefits h3,
+.requirements h3,
+aside h3 {
+	font-family: Anton, arial, sans-serif;
+	font-size: 3em;
+	padding: 20px 30px;	
+}
+
+/* set paragraph tag font size ,line height and padding */
+.explanation p,
+.participation p,
+.benefits p {
+	font-size: 1.5em;
+	line-height: 1.5;
+	padding: 0.5em;
+}
+
+/* zen-participation styling */
+.participation {
+	width:50%;/* set width */
+	text-align: center;/* align text in center */
+	margin-top: -50px;
+    margin-right: none;
+    position: relative;   
+}
+
+/* set color of participation a text */
+.participation a:link,
+.participation a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+.participation a:hover,
+.participation a:active {
+	text-decoration: underline;
+}
+
+/* participation side image */
+.participation:after {
+	content:url(img/star-wars-storm-trooper-figures.png); /* get the image*/
+	position: absolute;
+	top:120px;
+	right:-690px;
+}
+
+/* benefits */
+/* put a sword image before benefits div start */
+.benefits:before {
+	content: url(img/star-wars-lightsaber-laser-sword2.png)
+}
+
+.benefits {
+	width: 100%;
+	text-align: center;
+    padding-bottom: 8vh;
+}
+
+/*  moving spaceship with the help of content and animation after benefits */
+.benefits:after {
+	content: "";
+	background-image: url(img/spaceship-model-isolated.png);
+	background-repeat: no-repeat;
+	background-size: 330px 300px;
+	display: inline-block;
+	width:330px;
+	height:300px;
+	position: relative;
+	padding-bottom: 2em;
+	/* set animation name and animation moving time */
+    -webkit-animation: mymove 5s infinite; 
+    /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+}
+
+/*  execute mymove animation */
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  0%   {top: 0px; left: 0px;}
+  25%  {top: 0px; left: 100px;}
+  50%  {top: 100px; left: 100px;}
+  75%  {top: 100px; left: 0px;}
+  100% {top: 0px; left: 0px;}
+}
+/* firefox */
+@-moz-keyframes mymove {
+  0%   {top: 0px; left: 0px;}
+  25%  {top: 0px; left: 100px;}
+  50%  {top: 100px; left: 100px;}
+  75%  {top: 100px; left: 0px;}
+  100% {top: 0px; left: 0px;}
+}
+/* opera */
+@-o-keyframes mymove {
+  0%   {top: 0px; left: 0px;}
+  25%  {top: 0px; left: 100px;}
+  50%  {top: 100px; left: 100px;}
+  75%  {top: 100px; left: 0px;}
+  100% {top: 0px; left: 0px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  0%   {top: 0px; left: 0px;}
+  25%  {top: 0px; left: 100px;}
+  50%  {top: 100px; left: 100px;}
+  75%  {top: 100px; left: 0px;}
+  100% {top: 0px; left: 0px;}
+}
+
+/* set requirements class width and align text */
+.requirements {
+	width:100%;
+	text-align: center;
+}
+
+/* set requirements paragraph width and float them left to set two paragraphs per column and two rows */
+.requirements p {
+	width:48%;
+	float: left;
+	font-size: 1.5em;
+	padding: 0.5em;
+}
+
+/* give reuirements last paragraph width 100 and remove float */
+.requirements p:last-child {
+	float: none;
+	width:100%;
+}
+
+/* requirements a tag text color */
+.requirements a:link,
+.requirements a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+.requirements a:hover,
+.requirements a:active {
+	text-decoration: underline;
+}
+
+/* set footer width and top and bottom padding */
+footer {
+	width: 100%;
+	padding: 2em 2em;
+	clear: both;
+}
+
+/*  style footer a tag text */
+footer a {
+	font-size:2em; /* size of font */
+	font-weight: bolder; /* make font bolder */
+    color: tomato;
+    text-decoration: none;/* remove underline from text*/ 
+    padding: 0.5em 0.5em;/* give top bottom padding*/
+    border: solid 2px tomato;/* set border around the text*/
+    margin-left: 10%;/* set some spacing to cover the whole page */
+}
+
+/* put an animated image after footer */
+footer:after {
+	content: "";
+	background-image: url(img/spaceship-model-toys-star-wars.png);/* get image */
+	background-repeat: no-repeat;
+	background-size: 600px 400px;/* set image width and height */
+	display: block;
+	width:600px; /* set content width */
+	height:400px;/* set content height */
+	position: relative;/* set position relative so it can move */
+	margin-top: 3em;
+	padding-bottom: 2em;
+	/* call movespaceship animation and animation time */
+    -webkit-animation: movespaceship 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: movespaceship 5s infinite;
+}
+
+/* execute movespaceship animation to move it left */
+/* Safari */
+@-webkit-keyframes movespaceship {
+  0%   {top: 0px; left: 0px;}
+  50% {top: 0px; left: 500px;}
+  100% {top: 0px; left: 0px;}
+}
+/* firefox*/
+@-moz-keyframes movespaceship {
+  0%   {top: 0px; left: 0px;}
+  50% {top: 0px; left: 500px;}
+  100% {top: 0px; left: 0px;}
+}
+/* Opera */
+@-o-keyframes movespaceship {
+  0%   {top: 0px; left: 0px;}
+  50% {top: 0px; left: 500px;}
+  100% {top: 0px; left: 0px;}
+}
+
+/* Standard syntax */
+@keyframes movespaceship {
+  0%   {top: 0px; left: 0px;}
+   50% {top: 0px; left: 500px;}
+  100% {top: 0px; left: 0px;}
+}
+
+/* aside a tag text color */
+aside a {
+	color:#fff;
+	text-decoration: none;
+}
+
+/* sidebar content width and float them left */
+.design-selection {
+	width:40%;
+	float:left;
+}
+
+.design-archives,
+.zen-resources {
+	width:30%;
+	float:left;
+}
+
+/* remove bullet */
+.design-selection nav ul,
+.design-archives nav ul,
+.zen-resources ul {
+	list-style-type: none;
+}
+
+/* set font size of a tag text */
+.design-selection nav ul li a,
+.design-archives nav ul li a,
+.zen-resources ul li a {
+	font-size: 1em;
+}
+
+.design-selection nav ul li a:link,
+.design-archives nav ul li a:link,
+.zen-resources ul li a:link,
+.design-selection nav ul li a:visited,
+.design-archives nav ul li a:visited,
+.zen-resources ul li a:visited {
+	text-decoration: none;
+}
+
+.design-selection nav ul li a:hover,
+.design-archives nav ul li a:hover,
+.zen-resources ul li a:hover,
+.design-selection nav ul li a:active,
+.design-archives nav ul li a:active,
+.zen-resources ul li a:active {
+	text-decoration: underline;
+}
+
+/* set font-size and font weight */
+.design-selection nav ul li:first-child:before,
+.design-selection nav ul li:nth-child(2):before,
+.design-selection nav ul li:nth-child(3):before,
+.design-selection nav ul li:nth-child(4):before,
+.design-selection nav ul li:nth-child(5):before,
+.design-selection nav ul li:nth-child(6):before,
+.design-selection nav ul li:nth-child(7):before,
+.design-selection nav ul li:last-child:before,
+.design-archives nav ul li:first-child:before,
+.design-archives nav ul li:last-child:before,
+.zen-resources ul li:first-child:before,
+.zen-resources ul li:nth-child(2):before,
+.zen-resources ul li:nth-child(3):before,
+.zen-resources ul li:nth-child(4):before,
+.zen-resources ul li:last-child:before {
+	font-size: 2em;
+	padding: inherit;
+	font-weight: 600;
+}
+
+/* put numbering in front of list items */
+.design-selection nav ul li:first-child:before,
+.design-archives nav ul li:first-child:before,
+.zen-resources ul li:first-child:before {
+	content: "1";
+}
+
+.design-selection nav ul li:nth-child(2):before,
+.design-archives nav ul li:last-child:before,
+.zen-resources ul li:nth-child(2):before {
+	content: "2";	
+}
+
+.design-selection nav ul li:nth-child(3):before,
+.zen-resources ul li:nth-child(3):before {
+	content: "3";
+}
+
+.design-selection nav ul li:nth-child(4):before,
+.zen-resources ul li:nth-child(4):before {
+	content: "4";
+}
+
+.design-selection nav ul li:nth-child(5):before,
+.zen-resources ul li:last-child:before {
+	content: "5";
+}
+
+.design-selection nav ul li:nth-child(6):before {
+	content: "6";
+}
+
+.design-selection nav ul li:nth-child(7):before {
+	content: "7";
+}
+
+.design-selection nav ul li:last-child:before {
+	content: "8";
+}
+
+/* give list tag padding top and bottom */
+.design-selection nav ul li,
+.design-archives nav ul li,
+.zen-resources ul li {
+	padding: 0.5em 1em;
+}
